@@ -12,10 +12,6 @@
 	display: table;
 }
 
-.dialogue {
-    color: white;
-    border-radius: 10px;
-	background-color: black;
-	opacity:0.9;
+.mainquestion {
+	background-color: #C8A275;
 }
-
