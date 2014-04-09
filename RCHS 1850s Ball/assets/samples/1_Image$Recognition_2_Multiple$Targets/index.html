@@ -16,13 +16,19 @@
 </head>
 
 <body>
-    <div id="dialog1" class="dialogue mainquestion">
-    	Bridget Larkins: “Welcome to the Hart’s residence.  Mrs. Hart has spared no expense in tonight’s ball.  Do you have your invitation?</div>
-    <div id="dialog2" class="dialogue mainquestion">
-    	Bridget Larkins:  “No matter.  Mrs. Hart is in the sitting room with her son.  I’m sure they will want to meet you when you are ready.</div>
-    <div id="dialog3" class="dialogue mainquestion">
-    	There is oyster and fowl in the dining room, champagne punch in the sitting room, and conversation in the parlor.</div>
-
+     <div id="dialog1" class="dialogue">Good evening. My name is Anna. Welcome to the Hart-Cluett ball. If there is anything that you need, I would be delighted to assist you.</div>
+    <div id="dialog2" class="dialogue">I am enjoying it very much. And you sir/madam?</div>
+    <div id="dialog3" class="dialogue">I was born in Rensselaerwyck. I believe you refer to it as Rensselaer County, these days.</div>
+    <div id="dialog4" class="dialogue">I have been with the Harts for as long as I can remember. They are a good family and very kind to me. Mrs. Hart’s mother, Mrs. Howard, sent me with Mrs. Hart to keep her company and help her adjust to her life in Troy. I’ve been with Mrs. Hart for so many years that I’ve cooked for her, cleaned for her, watched her grow up and even helped her birth her children. </div>
+    <div id="dialog5" class="dialogue">I work from dawn to dusk, cooking for the family, cleaning and maintaining the home, and making sure the children are tended to. I am 56 years old and cannot work like I used to, but the Harts are still very good to me. 
+    </div>
+    <div id="dialog6" class="dialogue">Wonderful. You may join the other guests in the dining room. Please enjoy the refreshments and appetizers.</div>
+    <div id="dialog7" class="dialogue">I do believe there are many interesting things to see around this house. We have [ advertise items of interest within the house ] in our parlor. And we have [ advertise dining room items ] which you may explore in our lovely dining room.</div>
+    <div id="dialog8" class="dialogue">To be honest, Mrs. Hart has been suffering from the loss of her late husband Richard. Her mother, Mrs. Howard has moved in and I believe her presence has really been helping Mrs. Hart compose herself. I must say, I truly admire the initiative the Hart women have been taking towards education for young women. I never would have imagined little Betsey would ever grow to be so engaged in business and city culture. </div>
+    <div id="dialog9" class="dialogue">Richard and Betsey both have had quite an interest in promoting education. Betsey strongly supported the Troy Female Seminary. Eight of her girls, in fact, have attended the institution.</div>
+    <div id="dialog10" class="dialogue">She has changed so much since she first came here with Richard. I remember, when Betsey was young, she could hardly cook and was reluctant to mingle with the older wives in the neighborhood. But look at her now.
+    </div>
+    
     <div id="catherine-dialog1" class="dialogue mainquestion">
     	Good evening.  Mrs. Hart has the finest tastes in town.  The oysters arrived from the city this morning, and the game was caught yesterday.</div>   
     <div id="catherine-dialog2" class="dialogue mainquestion">
@@ -33,50 +39,149 @@
 	</div>
 
     <script>		
-	$("#dialog1").dialog({
-        autoOpen: false,
-		modal: true,
-		resizable: false,
-		buttons: {
-			"Yes.": function() {
-			    $(this).dialog("close");
-				$("#dialog3").dialog("open");
-			},
-			"No, I seem to have misplaced it.": function() {
-				$(this).dialog("close");
-				$("#dialog2").dialog("open");
-			}
-		}
-	});
+	 $("#dialog1").dialog({
+                autoOpen: false,
+				modal: true,
+				resizable: false,
+				buttons: {
+					"Hi Anna. Are things going well with the party so far?": function() {
+					    $(this).dialog("close");
+						$("#dialog2").dialog("open");
+					},
+					"Tell me about yourself, Anna. Where are you from? What are your duties around here?": function() {
+						$(this).dialog("close");
+						$("#dialog3").dialog("open");
+					},
+					"What a grand house. How long have you been employed here, Anna?": function() {
+						$(this).dialog("close");
+						$("#dialog4").dialog("open");
+					},
+					"You must have done a great deal to get this party set up. It looks absolutely wonderful. Do you work all day, Anna?": function() {
+						$(this).dialog("close");
+						$("#dialog5").dialog("open");
+					},
+					"I don’t need anything right now. Thanks.": function() {
+						$(this).dialog("close");
+						$("#dialog6").dialog("open");
+					}
+				}
+			});
 			
-	$("#dialog2").dialog({
-        autoOpen: false,
-		modal: true,
-		resizable: false,
-		buttons: {
-			"Thank you.": function() {
-				$(this).dialog("close");
-				$("#dialog3").dialog("open");
-			}
-		}
-	});
-		
-	$("#dialog3").dialog({
-        autoOpen: false,
-		modal: true,
-		resizable: false,
-		buttons: {
-			"I could eat like all wrath. I'll head to the dining room.": function() {
-				$(this).dialog("close");
-			},
-			"A horn of champagne sounds delightful.  I’ll mosey over to the sitting room.": function() {
-				$(this).dialog("close");
-			},
-			"I’ll catch up with the guests in the parlor.": function() {
-				$(this).dialog("close");
-			}
-		}
-	});
+	     $("#dialog2").dialog({
+                autoOpen: false,
+				modal: true,
+				resizable: false,
+				buttons: {
+					"The house is beautiful. I’m enjoying the view.": function() {
+						$(this).dialog("close");
+						$("#dialog1").dialog("open");
+					},
+					"To tell you the truth, balls really aren’t for me.": function() {
+						$(this).dialog("close");
+						$("#dialog7").dialog("open");
+					}
+				}
+			});
+			
+			$("#dialog3").dialog({
+                autoOpen: false,
+				modal: true,
+				resizable: false,
+				buttons: {
+					" Well that's interesting. Why don't you tell me a bit about Mrs. Hart. What is life for her like, here?": function() {
+						$(this).dialog("close");
+						$("#dialog8").dialog("open");
+					}
+				}
+			});
+			
+			$("#dialog4").dialog({
+                autoOpen: false,
+				modal: true,
+				resizable: false,
+				buttons: {
+					"That’s quite commendable. I think I might go see if I can have a word with Mrs. Hart herself.": function() {
+						$(this).dialog("close");
+					}
+				}
+			});
+			
+			$("#dialog5").dialog({
+                autoOpen: false,
+				modal: true,
+				resizable: false,
+				buttons: {
+					"The Harts sound lovely. Perhaps I’ll go see if Mrs. Hart is around.": function() {
+						$(this).dialog("close");
+						$("#dialog6").dialog("open");
+					},
+					"Tell me about Mrs. Hart. What is life for her like, here?": function() {
+						$(this).dialog("close");
+						$("#dialog8").dialog("open");
+					}
+				}
+			});
+			
+			$("#dialog6").dialog({
+                autoOpen: false,
+				modal: true,
+				resizable: false,
+				buttons: {
+					"Pleasure meeting you, Anna.": function() {
+						$(this).dialog("close");
+					}
+				}
+			});
+			
+			$("#dialog7").dialog({
+                autoOpen: false,
+				modal: true,
+				resizable: false,
+				buttons: {
+					"That’s fascinating. I think I’ll go have a look. Pleasure meeting you, Anna.": function() {
+						$(this).dialog("close");
+					}
+				}
+			});
+			
+			$("#dialog8").dialog({
+                autoOpen: false,
+				modal: true,
+				resizable: false,
+				buttons: {
+					"Education for young women? Do tell me more. What has Mrs. Hart accomplished there?": function() {
+						$(this).dialog("close");
+						$("#dialog9").dialog("open");
+					},
+					"Was Mrs. Hart not always like this?": function() {
+						$(this).dialog("close");
+						$("#dialog10").dialog("open");
+					}
+				}
+			});
+			
+			$("#dialog9").dialog({
+                autoOpen: false,
+				modal: true,
+				resizable: false,
+				buttons: {
+					"That’s quite commendable. I think I might go see if I can have a word with Mrs. Hart herself.": function() {
+						$(this).dialog("close");
+					}
+				}
+			});
+			
+			$("#dialog10").dialog({
+                autoOpen: false,
+				modal: true,
+				resizable: false,
+				buttons: {
+					"That’s fascinating. I think I’ll go have a look. Pleasure meeting you, Anna.": function() {
+						$(this).dialog("close");
+					}
+				}
+			});
+
 		
 		
 	$("#catherine-dialog1").dialog({
