@@ -11,31 +11,49 @@
     <script src="architect://architect.js"></script>
     <script type="text/javascript" src="../ade.js"></script>
     
-    <link rel="stlyesheet" href="css/jquery-ui.min.css">
+    <link rel="stylesheet" href="css/jquery-ui.min.css">
     <link rel="stylesheet" href="css/default.css">
 </head>
 
 <body>
-     <div id="dialog1" class="dialogue">Good evening. My name is Anna. Welcome to the Hart-Cluett ball. If there is anything that you need, I would be delighted to assist you.</div>
+     <div id="dialog1" class="dialogue">Good evening. My name is Anna. Welcome to the Hart-Cluett ball. 
+     	If there is anything that you need, I would be delighted to assist you.</div>
     <div id="dialog2" class="dialogue">I am enjoying it very much. And you sir/madam?</div>
     <div id="dialog3" class="dialogue">I was born in Rensselaerwyck. I believe you refer to it as Rensselaer County, these days.</div>
-    <div id="dialog4" class="dialogue">I have been with the Harts for as long as I can remember. They are a good family and very kind to me. Mrs. Hart’s mother, Mrs. Howard, sent me with Mrs. Hart to keep her company and help her adjust to her life in Troy. I’ve been with Mrs. Hart for so many years that I’ve cooked for her, cleaned for her, watched her grow up and even helped her birth her children. </div>
-    <div id="dialog5" class="dialogue">I work from dawn to dusk, cooking for the family, cleaning and maintaining the home, and making sure the children are tended to. I am 56 years old and cannot work like I used to, but the Harts are still very good to me. 
+    <div id="dialog4" class="dialogue">I have been with the Harts for as long as I can remember. 
+    	They are a good family and very kind to me. Mrs. Hart's mother, Mrs. Howard, sent me with 
+    	Mrs. Hart to keep her company and help her adjust to her life in Troy. I've been with Mrs. Hart for so many years that 
+    	I've cooked for her, cleaned for her, watched her grow up and even helped her birth her children. </div>
+    <div id="dialog5" class="dialogue">I work from dawn to dusk, cooking for the family, cleaning and maintaining the home, and 
+   		making sure the children are tended to. 
+    	I am 56 years old and cannot work like I used to, but the Harts are still very good to me. 
     </div>
-    <div id="dialog6" class="dialogue">Wonderful. You may join the other guests in the dining room. Please enjoy the refreshments and appetizers.</div>
-    <div id="dialog7" class="dialogue">I do believe there are many interesting things to see around this house. We have [ advertise items of interest within the house ] in our parlor. And we have [ advertise dining room items ] which you may explore in our lovely dining room.</div>
-    <div id="dialog8" class="dialogue">To be honest, Mrs. Hart has been suffering from the loss of her late husband Richard. Her mother, Mrs. Howard has moved in and I believe her presence has really been helping Mrs. Hart compose herself. I must say, I truly admire the initiative the Hart women have been taking towards education for young women. I never would have imagined little Betsey would ever grow to be so engaged in business and city culture. </div>
-    <div id="dialog9" class="dialogue">Richard and Betsey both have had quite an interest in promoting education. Betsey strongly supported the Troy Female Seminary. Eight of her girls, in fact, have attended the institution.</div>
-    <div id="dialog10" class="dialogue">She has changed so much since she first came here with Richard. I remember, when Betsey was young, she could hardly cook and was reluctant to mingle with the older wives in the neighborhood. But look at her now.
+    <div id="dialog6" class="dialogue">Wonderful. You may join the other guests in the dining room. 
+    	Please enjoy the refreshments and appetizers.</div>
+    <div id="dialog7" class="dialogue">I do believe there are many interesting things to see around this house. 
+    	We have desserts and dancing in our parlor. And we have desserts, hor d'ourvres and champagne
+    	in our dining room.</div>
+    <div id="dialog8" class="dialogue">To be honest, Mrs. Hart has been suffering from the loss of her late husband Richard. 
+    	Her mother, Mrs. Howard has moved in and I believe her presence has really been helping Mrs. Hart compose herself. 
+    	I must say, I truly admire the initiative the Hart women have been taking towards education for young women. 
+    	I never would have imagined little Betsey would ever grow to be so engaged in business and city culture. </div>
+    <div id="dialog9" class="dialogue">Richard and Betsey both have had quite an interest in promoting education. 
+    	Betsey strongly supported the Troy Female Seminary. Eight of her girls, in fact, have attended the institution.</div>
+    <div id="dialog10" class="dialogue">She has changed so much since she first came here with Richard. 
+    	I remember, when Betsey was young, she could hardly cook and was reluctant to mingle with the older wives in the 
+    	neighborhood.
     </div>
     
     <div id="catherine-dialog1" class="dialogue mainquestion">
-    	Good evening.  Mrs. Hart has the finest tastes in town.  The oysters arrived from the city this morning, and the game was caught yesterday.</div>   
+    	Good evening.  Mrs. Hart has the finest tastes in town. The oysters arrived from the city this morning, and the 
+    	game was caught yesterday.</div>   
     <div id="catherine-dialog2" class="dialogue mainquestion">
-    	“If you are looking for ice cream or champagne, you can find them in the sitting room.</div>
+    	If you are looking for ice cream or champagne, you can find them in the sitting room.</div>
     <div id="catherine-dialog3" class="dialogue mainquestion">
     	If there is anything you fancy, I am here to help.</div>
-	<div id="catherine-dialog4" class="dialogue mainquestion">Mrs. Hart runs an impeccable household.  We moved the parlor furniture to the back building and rolled up the carpets to make room for the dancing.  The china had to be unpacked and cleaned.  I snore, we’ve been dusting and polishing all week!
+	<div id="catherine-dialog4" class="dialogue mainquestion">Mrs. Hart runs an impeccable household. 
+	We moved the parlor furniture to the back building and rolled up the carpets to make room for the dancing.  
+	The china had to be unpacked and cleaned.  I snore, we've been dusting and polishing all week!
 	</div>
 
     <script>		
@@ -60,7 +78,7 @@
 						$(this).dialog("close");
 						$("#dialog5").dialog("open");
 					},
-					"I don’t need anything right now. Thanks.": function() {
+					"I don't need anything right now. Thanks.": function() {
 						$(this).dialog("close");
 						$("#dialog6").dialog("open");
 					}
@@ -72,11 +90,11 @@
 				modal: true,
 				resizable: false,
 				buttons: {
-					"The house is beautiful. I’m enjoying the view.": function() {
+					"The house is beautiful. I'm enjoying the view.": function() {
 						$(this).dialog("close");
 						$("#dialog1").dialog("open");
 					},
-					"To tell you the truth, balls really aren’t for me.": function() {
+					"To tell you the truth, balls really aren't for me.": function() {
 						$(this).dialog("close");
 						$("#dialog7").dialog("open");
 					}
@@ -88,7 +106,7 @@
 				modal: true,
 				resizable: false,
 				buttons: {
-					" Well that's interesting. Why don't you tell me a bit about Mrs. Hart. What is life for her like, here?": function() {
+					"Well that's interesting. Why don't you tell me a bit about Mrs. Hart. What is life for her like, here?": function() {
 						$(this).dialog("close");
 						$("#dialog8").dialog("open");
 					}
@@ -100,7 +118,7 @@
 				modal: true,
 				resizable: false,
 				buttons: {
-					"That’s quite commendable. I think I might go see if I can have a word with Mrs. Hart herself.": function() {
+					"That's quite commendable. I think I might go see if I can have a word with Mrs. Hart herself.": function() {
 						$(this).dialog("close");
 					}
 				}
@@ -111,7 +129,7 @@
 				modal: true,
 				resizable: false,
 				buttons: {
-					"The Harts sound lovely. Perhaps I’ll go see if Mrs. Hart is around.": function() {
+					"The Harts sound lovely. Perhaps I'll go see if Mrs. Hart is around.": function() {
 						$(this).dialog("close");
 						$("#dialog6").dialog("open");
 					},
@@ -138,7 +156,7 @@
 				modal: true,
 				resizable: false,
 				buttons: {
-					"That’s fascinating. I think I’ll go have a look. Pleasure meeting you, Anna.": function() {
+					"That's fascinating. I think I'll go have a look. Pleasure meeting you, Anna.": function() {
 						$(this).dialog("close");
 					}
 				}
@@ -165,7 +183,7 @@
 				modal: true,
 				resizable: false,
 				buttons: {
-					"That’s quite commendable. I think I might go see if I can have a word with Mrs. Hart herself.": function() {
+					"That's quite commendable. I think I might go see if I can have a word with Mrs. Hart herself.": function() {
 						$(this).dialog("close");
 					}
 				}
@@ -176,7 +194,7 @@
 				modal: true,
 				resizable: false,
 				buttons: {
-					"That’s fascinating. I think I’ll go have a look. Pleasure meeting you, Anna.": function() {
+					"That's fascinating. I think I'll go have a look. Pleasure meeting you, Anna.": function() {
 						$(this).dialog("close");
 					}
 				}
