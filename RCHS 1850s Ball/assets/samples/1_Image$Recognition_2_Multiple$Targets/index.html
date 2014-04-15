@@ -16,64 +16,105 @@
 </head>
 
 <body>
-     <div id="dialog1" class="dialogue">Good evening. My name is Anna. Welcome to the Hart ball of January 1850. 
+	<!-- App Intro dialogue on the landing screen, opens automatically -->
+	<div id="appintro" class="dialogue mainquestion" title="Welcome to the RCHS">
+		You have been invited to the Hart family Ball of January 1850. 
+		This mobile app will provide a question-answer dialogue with historical persons and items as you move from room to room.
+		To begin your visit, point your mobile device toward the clock in the hallway. Tap on the maid that appears
+		to learn about the Hart Family Ball that took place in this house with 150 guests.
+	</div>
+	<div id="appintro1" class="dialogue mainquestion" title="Why a Ball in January 1850?">
+		Richard and Betsey Hart were well-to-do and had 14 children, 8 of whom were daughters.
+		Sponsoring a Ball was an opportunity for them to meet suitors for eventual marriage.
+	</div>
+	<div id="appintro2" class="dialogue mainquestion" title="This Mobile App">
+		This is an Augmented Reality mobile application that overlays historically accurate images of people 
+		and food that are representative of the 1850s in Troy. This app will lead you on a guided tour where you
+		can interact with the people by asking them questions, and learn more about the food and drink. Tap on the images
+		that appear to open a dialogue.
+	</div>
+	
+	<!-- Virginia Reel dialogue opens after the music stops playing in the parlor -->
+	<div id="virginiareel" class="dialogue mainquestion" title="Band Music">
+		The Harts hired a 9-piece band who set up at the end of the hallway. 
+		They played this Virginia Reel and Polka songs for guests to dance in the parlor.
+	</div>
+
+	<!-- Drawing/Sitting Room dessert and drink items, perhaps Billy the drunk on the couch -->
+	<div id="drawingroom" class="dialogue mainquestion" title="Drawing Room">
+		This Drawing or Sitting Room had ice desserts and champagne punch.
+		Guests would sit in this room with their food and drink to talk with others and rest their feet from 
+		the dancing that was in the parlor, across the hallway.
+	</div>
+
+	<div id="dessert2" class="dialogue" title="Dessert Items">
+		They served flavored desserts of elaborately carved ice, and baked scones.
+	</div>
+
+	<div id="dessert3" class="dialogue" title="Drawing Room">
+		This room was for guests to meet others while enjoying desserts and drinks from here and the dining room.
+		Guests could rest their feet from dancing in the parlor, on the other side of the hallway.	
+	</div>
+
+	<div id="dessert4" class="dialogue" title="Food and Drink Bill">
+		The bill was $132.25 in 1850, equal to over $4060 in 2014 dollars.
+	</div>
+	
+	<!-- Receipt for the Ball for $132.25 -->
+	<div id="partyreceipt" class="dialogue" title="Receipt for Food and Drinks">
+		<img src="assets/danceball_bill_1850.jpg">
+	</div>
+		
+	<!-- Bridget Larkins, hallway maid -->
+     <div id="bridget-dialog1" class="dialogue mainquestion" title="Bridget Larkins">Good evening. My name is Bridget Larkins.  
      	If there is anything that you need, I would be delighted to assist you.</div>
-    <div id="dialog2" class="dialogue">I am enjoying it very much. And you sir/madam?</div>
-    <div id="dialog3" class="dialogue">I was born in Rensselaerwyck. I believe you refer to it as Rensselaer County, these days.</div>
-    <div id="dialog4" class="dialogue">I have been with the Harts for as long as I can remember. 
+    <div id="bridget-dialog2" class="dialogue">I am enjoying it very much. And you sir/madam?</div>
+    <div id="bridget-dialog3" class="dialogue" title="Irish roots">I was born in Ireland and immigrated to Troy due to the Potato Famine.
+    	The Harts were one of the first families in Troy to hire Irish and freemen as their servants.</div>
+    <div id="bridget-dialog4" class="dialogue" title="Bridget's Work History">I have been with the Harts for as long as I can remember. 
     	They are a good family and very kind to me. Mrs. Hart's mother, Mrs. Howard, sent me with 
     	Mrs. Hart to keep her company and help her adjust to her life in Troy. I've been with Mrs. Hart for so many years that 
     	I've cooked for her, cleaned for her, watched her grow up and even helped her birth her children. </div>
-    <div id="dialog5" class="dialogue">I work from dawn to dusk, cooking for the family, cleaning and maintaining the home, and 
+    <div id="bridget-dialog5" class="dialogue" title="Maid Work Hours">I work from dawn to dusk, cooking for the family, cleaning and maintaining the home, and 
    		making sure the children are tended to. 
     	I am 56 years old and cannot work like I used to, but the Harts are still very good to me. 
     </div>
-    <div id="dialog6" class="dialogue">Wonderful. You may join the other guests in the dining room. 
+    <div id="bridget-dialog6" class="dialogue">Wonderful. You may join the other guests in the dining room. 
     	Please enjoy the refreshments and appetizers.</div>
-    <div id="dialog7" class="dialogue">I do believe there are many interesting things to see around this house. 
+    <div id="bridget-dialog7" class="dialogue">I do believe there are many interesting things to see around this house. 
     	We have desserts and dancing in our parlor. And we have desserts, hor d'ourvres and champagne
     	in our dining room.</div>
-    <div id="dialog8" class="dialogue">To be honest, Mrs. Hart has been suffering from the loss of her late husband Richard. 
+    <div id="bridget-dialog8" class="dialogue">Mrs. Hart has been suffering from the loss of her late husband Richard. 
     	Her mother, Mrs. Howard has moved in and I believe her presence has really been helping Mrs. Hart compose herself. 
     	I must say, I truly admire the initiative the Hart women have been taking towards education for young women. 
     	I never would have imagined little Betsey would ever grow to be so engaged in business and city culture. </div>
-    <div id="dialog9" class="dialogue">Richard and Betsey both have had quite an interest in promoting education. 
+    <div id="bridget-dialog9" class="dialogue" title="Educating Women">Richard and Betsey both have had quite an interest in promoting education. 
     	Betsey strongly supported the Troy Female Seminary. Eight of her girls, in fact, have attended the institution.</div>
-    <div id="dialog10" class="dialogue">She has changed so much since she first came here with Richard. 
+    <div id="bridget-dialog10" class="dialogue">She has changed so much since she first came here with Richard. 
     	I remember, when Betsey was young, she could hardly cook and was reluctant to mingle with the older wives in the 
     	neighborhood.
     </div>
     
+    <!-- Catherine Nichols, dining room maid -->
     <div id="catherine-dialog1" class="dialogue mainquestion">
     	Good evening.  Mrs. Hart has the finest tastes in town. The oysters arrived from the city this morning, and the 
     	game was caught yesterday.</div>   
     <div id="catherine-dialog2" class="dialogue mainquestion">
-    	If you are looking for ice cream or champagne, you can find them in the sitting room.</div>
+    	If you are looking for ice cream or champagne, you can find them in the drawing room.</div>
     <div id="catherine-dialog3" class="dialogue mainquestion">
     	If there is anything you fancy, I am here to help.</div>
 	<div id="catherine-dialog4" class="dialogue mainquestion">Mrs. Hart runs an impeccable household. 
-	We moved the parlor furniture to the back building and rolled up the carpets to make room for the dancing.  
-	The china had to be unpacked and cleaned.  I snore, we've been dusting and polishing all week!
+		We moved the parlor furniture to the back building and rolled up the carpets to make room for the dancing.  
+		The china had to be unpacked and cleaned.  I snore, we've been dusting and polishing all week!
 	</div>
 	
-	<script>
-	//Virginia Reel intro for 20 seconds
-	var sound = new AR.Sound("assets/virginia_reel_20secs.mp3", {
-	  onLoaded : function(){sound.play();},
-	  onError : function(){
-	    // alert the user that the sound file could not be loaded
-	    },
-	});
-	sound.onFinishedPlaying = function(){alert("The Harts hired a 9-piece band who set up at the end of this hallway. They played this Virginia Reel and Polka songs for guests to dance in the parlor, to your right. To begin your visit, tap on the maid for information about the Hart Family Ball that took place in this house with 132 guests in January 1850.");};
-	/*sound.onFinishedPlaying = function() {
-    	$("#virginiareel").dialog("open");	
-	};*/
-	sound.load();
-	sound.play();
-	 
-	</script>
-	
-	<script src="js/imagerecognition.js"></script>
 	<script src="js/dialogues.js" type="text/javascript"></script>
+	<script src="js/imagerecognition.js"></script>
+	<script>
+		//Virginia Reel song for 20 seconds
+		//playVirginiaReel();
+		//Open app intro dialogue window
+		$("#appintro").dialog("open");
+	</script>
 </body>
 </html>

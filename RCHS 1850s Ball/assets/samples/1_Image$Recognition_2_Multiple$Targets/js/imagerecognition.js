@@ -25,9 +25,9 @@ $(document).ready(function() {
 				scale: 0.7,
 				opacity: 0.7
 			});
-			//maid dialog window
+			//Bridget Larkins hallway maid dialog window
 			overlayHallwayMaid.onClick = function() {
-	        	$("#dialog1").dialog("open");	
+	        	$("#bridget-dialog1").dialog("open");	
 			};
 			//render the hallway with the maid overlay
 			var pageHallway = new AR.Trackable2DObject(this.tracker, "1_hallway", {
@@ -45,7 +45,7 @@ $(document).ready(function() {
 			});
 			//dessert dialog window
 			overlayDrawingDessert.onClick = function() {
-	        	$("#dessert-dialog-intro").dialog("open");	
+	        	$("#drawingroom").dialog("open");	
 			};
 			//render the drawing room with overlays
 			var pageDrawingRoom = new AR.Trackable2DObject(this.tracker, "2_drawingroom", {
@@ -78,6 +78,8 @@ $(document).ready(function() {
 					cam: [overlayParlorBilly, overlayParlorLady]
 				}
 			});
+			//Virginia Reel song plays for 20 seconds
+			//playVirginiaReel();
 	
 			// Dining room - Create overlay maid and food items
 			var imgDiningMaid = new AR.ImageResource("assets/hallway_maid.png");
@@ -101,7 +103,7 @@ $(document).ready(function() {
 				}
 			});
 			
-			//maid dialog window
+			//dining room maid dialog window
 			overlayDiningMaid.onClick = function() {
 	        	$("#catherine-dialog1").dialog("open");	
 			};
