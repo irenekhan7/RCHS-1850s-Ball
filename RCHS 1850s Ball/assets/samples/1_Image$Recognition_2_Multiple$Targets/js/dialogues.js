@@ -23,16 +23,16 @@ function playVirginiaReel(hasDialogue) {
 	modal: true,
 	resizable: false,
 	buttons: {
-		"Why did the Harts have this Ball dance?": function() {
+		"Start Tour": function() {
+			$(this).dialog("close");
+		},
+		"Tell Me More...": function() {
 		    $(this).dialog("close");
 			$("#appintro1").dialog("open");
 		},
 		"What is this application?": function() {
 			$(this).dialog("close");
 			$("#appintro2").dialog("open");
-		},
-		"Close": function() {
-			$(this).dialog("close");
 		}
 	}
 });
@@ -42,7 +42,7 @@ $("#appintro1").dialog({
 	modal: true,
 	resizable: false,
 	buttons: {
-		"Return to the Introduction": function() {
+		"Return to Introduction": function() {
 			$(this).dialog("close");
 			$("#appintro").dialog("open");
 		}
@@ -54,7 +54,7 @@ $("#appintro2").dialog({
 	modal: true,
 	resizable: false,
 	buttons: {
-		"Return to the Introduction": function() {
+		"Return to Introduction": function() {
 			$(this).dialog("close");
 			$("#appintro").dialog("open");
 		}

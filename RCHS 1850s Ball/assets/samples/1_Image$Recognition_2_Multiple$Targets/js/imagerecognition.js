@@ -85,9 +85,9 @@ $(document).ready(function() {
 	        	$("#virginiareel").dialog("open");	
 			};
 			
-			// Dining room - Create overlay maid and food items
-			var imgDiningMaid = new AR.ImageResource("assets/hallway_maid.png");
-			var overlayDiningMaid = new AR.ImageDrawable(imgDiningMaid, 1, {
+			// Dining room - Create overlay Richard Hart Jr. and food items
+			var imgRichardHart = new AR.ImageResource("assets/hallway_maid.png");
+			var overlayRichardHart = new AR.ImageDrawable(imgRichardHart, 1, {
 				offsetX: 0.17,
 				offsetY: -0.1,
 				scale: 0.8,
@@ -103,12 +103,12 @@ $(document).ready(function() {
 			//render the dining room with overlays
 			var pageDiningRoom = new AR.Trackable2DObject(this.tracker, "4_diningroom", {
 				drawables: {
-					cam: [overlayDiningFood, overlayDiningMaid]
+					cam: [overlayDiningFood, overlayRichardHart]
 				}
 			});
 			
 			//dining room maid dialog window
-			overlayDiningMaid.onClick = function() {
+			overlayRichardHart.onClick = function() {
 	        	$("#catherine-dialog1").dialog("open");	
 			};
 		},
