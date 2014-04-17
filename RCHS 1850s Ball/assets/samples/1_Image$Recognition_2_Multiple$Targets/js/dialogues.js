@@ -1,5 +1,6 @@
 //Virginia Reel song plays for 20 seconds
-function playVirginiaReel() {
+var hasDialogue = '';
+function playVirginiaReel(hasDialogue) {
 	var sound = new AR.Sound("assets/virginia_reel_20secs.mp3", {
 	  onLoaded : function(){sound.play();},
 	  onError : function(){
@@ -9,7 +10,9 @@ function playVirginiaReel() {
 	sound.load();
 	sound.play();
 	sound.onFinishedPlaying = function() {
-    	$("#virginiareel").dialog("open");	
+    	if (hasDialogue) {
+    		$("#virginiareel").dialog("open");
+    	}
 	};
 }
 

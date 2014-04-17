@@ -79,8 +79,12 @@ $(document).ready(function() {
 				}
 			});
 			//Virginia Reel song plays for 20 seconds
-			//playVirginiaReel();
-	
+			//playVirginiaReel('hasDialogue');
+			//Test Virginia Reel dialog window
+			overlayParlorLady.onClick = function() {
+	        	$("#virginiareel").dialog("open");	
+			};
+			
 			// Dining room - Create overlay maid and food items
 			var imgDiningMaid = new AR.ImageResource("assets/hallway_maid.png");
 			var overlayDiningMaid = new AR.ImageDrawable(imgDiningMaid, 1, {
