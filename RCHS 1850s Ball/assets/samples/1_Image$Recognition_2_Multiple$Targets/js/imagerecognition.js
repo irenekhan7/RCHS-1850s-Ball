@@ -51,7 +51,8 @@ $(document).ready(function() {
 			var pageDrawingRoom = new AR.Trackable2DObject(this.tracker, "2_drawingroom", {
 				drawables: {
 					cam: overlayDrawingDessert
-				}
+				},
+				onEnterFieldOfVision: function() { $("#virginiareel").dialog("open"); playVirginiaReel(''); }
 			});
 				
 			// Front parlor - Create overlay young Hart Daughter
@@ -81,7 +82,8 @@ $(document).ready(function() {
 			//Virginia Reel song plays for 20 seconds
 			//playVirginiaReel('hasDialogue');
 			//Test Virginia Reel dialog window
-			overlayParlorLady.onClick = function() {
+			overlayParlorLady.onEnterFieldOfVision = function() {
+	        	//playVirginiaReel('');
 	        	$("#virginiareel").dialog("open");	
 			};
 			
