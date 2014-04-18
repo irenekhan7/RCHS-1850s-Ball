@@ -23,11 +23,11 @@ $(document).ready(function() {
 				offsetX: 0.05,
 				offsetY: 0.05,
 				scale: 0.7,
-				opacity: 0.7
+				opacity: 0.6
 			});
 			//Bridget Larkins hallway maid dialog window
 			overlayHallwayMaid.onClick = function() {
-	        	$("#bridget-dialog1").dialog("open");	
+	        	$("#bridgetmain").dialog("open");	
 			};
 			//render the hallway with the maid overlay
 			var pageHallway = new AR.Trackable2DObject(this.tracker, "1_hallway", {
@@ -45,61 +45,55 @@ $(document).ready(function() {
 			});
 			//dessert dialog window
 			overlayDrawingDessert.onClick = function() {
-	        	$("#drawingroom").dialog("open");	
+	        	$("#drawingroommain").dialog("open");	
 			};
-			//render the drawing room with overlays
-			var pageDrawingRoom = new AR.Trackable2DObject(this.tracker, "2_drawingroom", {
+			//render the drawing room with dessert overlay
+			var pageDrawing = new AR.Trackable2DObject(this.tracker, "2_drawingroom", {
 				drawables: {
 					cam: overlayDrawingDessert
-				},
-				onEnterFieldOfVision: function() { $("#virginiareel").dialog("open"); playVirginiaReel(''); }
+				}
 			});
 				
-			// Front parlor - Create overlay young Hart Daughter
+			// Front parlor - Create overlay Maria Tillman
 			var imgParlorLady = new AR.ImageResource("assets/parlor_hart_daughter.png");
 			var overlayParlorLady = new AR.ImageDrawable(imgParlorLady, 1, {
 				offsetX: 0.2,
 				offsetY: 0.01,
-				opacity: 0.8,
+				opacity: 0.6,
 				scale: 0.8,
 				zOrder: 1
 			});
-			// Front parlor - Create overlay drunk Billy
+			// Front parlor - Create overlay drunk Billy Burden
 			var imgParlorBilly = new AR.ImageResource("assets/parlor_drunkman.png");
 			var overlayParlorBilly = new AR.ImageDrawable(imgParlorBilly, 1, {
 				offsetX: 0.05,
 				offsetY: -0.1,
-				opacity: 0.7,
+				opacity: 0.6,
 				scale: 0.4,
 				zOrder: -1
 			});
 			//render the front parlor with overlays
+			//Virginia Reel song plays for 20 seconds when user finds marker image
 			var pageParlorDance = new AR.Trackable2DObject(this.tracker, "3_parlor_front", {
 				drawables: {
 					cam: [overlayParlorBilly, overlayParlorLady]
-				}
+				},
+				onEnterFieldOfVision: function() { playVirginiaReel('hasDialogue'); }
 			});
-			//Virginia Reel song plays for 20 seconds
-			//playVirginiaReel('hasDialogue');
-			//Test Virginia Reel dialog window
-			overlayParlorLady.onEnterFieldOfVision = function() {
-	        	//playVirginiaReel('');
-	        	$("#virginiareel").dialog("open");	
-			};
 			
 			// Dining room - Create overlay Richard Hart Jr. and food items
-			var imgRichardHart = new AR.ImageResource("assets/hallway_maid.png");
+			var imgRichardHart = new AR.ImageResource("assets/richardhart.png");
 			var overlayRichardHart = new AR.ImageDrawable(imgRichardHart, 1, {
 				offsetX: 0.17,
 				offsetY: -0.1,
-				scale: 0.8,
-				opacity: 0.7
+				scale: 1.0,
+				opacity: 0.6
 			});
 			var imgDiningFood = new AR.ImageResource("assets/fooddrink/ice_flowers.png");
 			var overlayDiningFood = new AR.ImageDrawable(imgDiningFood, 1, {
 				offsetX: -0.17,
 				offsetY: -0.1,
-				scale: 0.5
+				scale: 0.4
 			});
 
 			//render the dining room with overlays
@@ -108,10 +102,13 @@ $(document).ready(function() {
 					cam: [overlayDiningFood, overlayRichardHart]
 				}
 			});
-			
-			//dining room maid dialog window
+			//Richard Hart dialog window
 			overlayRichardHart.onClick = function() {
-	        	$("#catherine-dialog1").dialog("open");	
+	        	$("#richardhartmain").dialog("open");	
+			};
+			//Dining Room food dialog window
+			overlayDiningFood.onClick = function() {
+	        	$("#diningfoodmain").dialog("open");	
 			};
 		},
 		//thumbnail of the target image

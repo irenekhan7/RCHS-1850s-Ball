@@ -16,9 +16,22 @@ function playVirginiaReel(hasDialogue) {
 	};
 }
 
+// =====================================================================
+// enable to tap outside the modal dialogue to close it
+$(document.body).on("click", ".ui-widget-overlay", function() {
+    $.each($(".ui-dialog"), function() {
+        var $dialog;
+        $dialog = $(this).children(".ui-dialog-content");
+        if($dialog.dialog("option", "modal")) {
+            $dialog.dialog("close");
+        }
+    });
+});
+
 // Dialogue window buttons appended below the intro text
+// ======================================================================
 // App intro questions/answers
- $("#appintro").dialog({
+ $("#appintromain").dialog({
     autoOpen: false,
 	modal: true,
 	resizable: false,
@@ -42,9 +55,9 @@ $("#appintro1").dialog({
 	modal: true,
 	resizable: false,
 	buttons: {
-		"Return to Introduction": function() {
+		"Return to Invitation": function() {
 			$(this).dialog("close");
-			$("#appintro").dialog("open");
+			$("#appintromain").dialog("open");
 		}
 	}
 });
@@ -54,13 +67,14 @@ $("#appintro2").dialog({
 	modal: true,
 	resizable: false,
 	buttons: {
-		"Return to Introduction": function() {
+		"Return to Invitation": function() {
 			$(this).dialog("close");
-			$("#appintro").dialog("open");
+			$("#appintromain").dialog("open");
 		}
 	}
 });
 
+// ======================================================================
 //Virginia Reel questions/answers
 $("#virginiareel").dialog({
     autoOpen: false,
@@ -69,69 +83,255 @@ $("#virginiareel").dialog({
 	buttons: {
 		"What is the Virginia Reel?": function() {
 		    $(this).dialog("close");
+		    $("#virginiareel1").dialog("open");
 		},
-		"How late did they dance that night?": function() {
+		"How late will we dance tonight?": function() {
 		    $(this).dialog("close");
+		    $("#virginiareel2").dialog("open");
+		},
+		"Close": function() {
+			$(this).dialog("close");
 		}
 	}
 });
-
-//Drawing room food desserts questions/answers
-$("#drawingroom").dialog({
+$("#virginiareel1").dialog({
     autoOpen: false,
 	modal: true,
 	resizable: false,
 	buttons: {
-		"What type of desserts did they serve at an 1850 ball?": function() {
-		    $(this).dialog("close");
-			$("#dessert2").dialog("open");
-		},
-		"What was usually in this drawing room?": function() {
+		"Return": function() {
 			$(this).dialog("close");
-			$("#dessert3").dialog("open");
-		},
-		"How much did a Ball like this cost in 1850?": function() {
+			$("#virginiareel").dialog("open");
+		}
+	}
+});
+$("#virginiareel2").dialog({
+    autoOpen: false,
+	modal: true,
+	resizable: false,
+	buttons: {
+		"Return": function() {
 			$(this).dialog("close");
-			$("#dessert4").dialog("open");
+			$("#virginiareel").dialog("open");
 		}
 	}
 });
 
+// ======================================================================
+//Drawing room food desserts questions/answers
+$("#drawingroommain").dialog({
+    autoOpen: false,
+	modal: true,
+	resizable: false,
+	buttons: {
+		"What type of desserts do they serve at this Ball?": function() {
+		    $(this).dialog("close");
+			$("#dessert1").dialog("open");
+		},
+		"Who is usually in this drawing room?": function() {
+			$(this).dialog("close");
+			$("#dessert2").dialog("open");
+		}
+	}
+});
+
+$("#dessert1").dialog({
+    autoOpen: false,
+	modal: true,
+	resizable: false,
+	buttons: {
+		"Return": function() {
+			$(this).dialog("close");
+			$("#drawingroommain").dialog("open");
+		}
+	}
+});
 $("#dessert2").dialog({
     autoOpen: false,
 	modal: true,
 	resizable: false,
 	buttons: {
-		"Close": function() {
+		"Return": function() {
 			$(this).dialog("close");
-			$("#drawingfood").dialog("open");
-		}
-	}
-});
-$("#dessert3").dialog({
-    autoOpen: false,
-	modal: true,
-	resizable: false,
-	buttons: {
-		"Close": function() {
-			$(this).dialog("close");
-			$("#drawingfood").dialog("open");
+			$("#drawingroommain").dialog("open");
 		}
 	}
 });
 
-$("#dessert4").dialog({
+// ======================================================================
+//Bridget Larkins, hallway maid questions/answers
+ $("#bridgetmain").dialog({
     autoOpen: false,
 	modal: true,
 	resizable: false,
 	buttons: {
-		"View the actual receipt sent to Mrs. Richard P. Hart": function() {
-			//$(this).dialog("close");
+		"Tell me, how late will you have guests?": function() {
+		    $(this).dialog("close");
+			$("#bridget1").dialog("open");
+		},
+		"I detect an accent. Where are you from originally?": function() {
+			$(this).dialog("close");
+			$("#bridget2").dialog("open");
+		},
+		"How long have you been employed by the Harts?": function() {
+			$(this).dialog("close");
+			$("#bridget3").dialog("open");
+		},
+		"You must have done a great deal to prepare for this party. Did you work all day?": function() {
+			$(this).dialog("close");
+			$("#bridget4").dialog("open");
+		}
+	}
+});
+	
+$("#bridget1").dialog({
+    autoOpen: false,
+	modal: true,
+	resizable: false,
+	buttons: {
+		"Return": function() {
+			$(this).dialog("close");
+			$("#bridgetmain").dialog("open");
+		}
+	}
+});
+	
+$("#bridget2").dialog({
+    autoOpen: false,
+	modal: true,
+	resizable: false,
+	buttons: {
+		"Return": function() {
+			$(this).dialog("close");
+			$("#bridgetmain").dialog("open");
+		}
+	}
+});
+
+$("#bridget3").dialog({
+    autoOpen: false,
+	modal: true,
+	resizable: false,
+	buttons: {
+		"Return": function() {
+			$(this).dialog("close");
+			$("#bridgetmain").dialog("open");
+		}
+	}
+});
+
+$("#bridget4").dialog({
+    autoOpen: false,
+	modal: true,
+	resizable: false,
+	buttons: {
+		"Return": function() {
+			$(this).dialog("close");
+			$("#bridgetmain").dialog("open");
+		}
+	}
+});
+
+// ======================================================================
+//Richard Hart Jr. in the dining room
+$("#richardhartmain").dialog({
+    autoOpen: false,
+	modal: true,
+	resizable: false,
+	buttons: {
+		"What is your occupation?": function() {
+			$(this).dialog("close");
+			$("#richardhart1").dialog("open");
+		},
+		"Tell me about your parents": function() {
+			$(this).dialog("close");
+			$("#richardhart2").dialog("open");
+		},
+		"Mrs. Hart has been supportive of education, especially for women?": function() {
+			$(this).dialog("close");
+			$("#richardhart3").dialog("open");
+		}
+	}
+});
+
+$("#richardhart1").dialog({
+    autoOpen: false,
+	modal: true,
+	resizable: false,
+	buttons: {
+		"Return": function() {
+			$(this).dialog("close");
+			$("#richardhartmain").dialog("open");
+		}
+	}
+});
+
+$("#richardhart2").dialog({
+    autoOpen: false,
+	modal: true,
+	resizable: false,
+	buttons: {
+		"Return": function() {
+			$(this).dialog("close");
+			$("#richardhartmain").dialog("open");
+		}
+	}
+});
+
+$("#richardhart3").dialog({
+    autoOpen: false,
+	modal: true,
+	resizable: false,
+	buttons: {
+		"Return": function() {
+			$(this).dialog("close");
+			$("#richardhartmain").dialog("open");
+		}
+	}
+});
+
+// ======================================================================
+//Food items and Receipt, dining room
+$("#diningfoodmain").dialog({
+    autoOpen: false,
+	modal: true,
+	resizable: false,
+	buttons: {
+		"Tell me more about the food and drinks": function() {
+		    $(this).dialog("close");
+			$("#diningfood1").dialog("open");
+		},
+		"How much did a Ball like this cost in 1850?": function() {
+			$(this).dialog("close");
+			$("#ballcost").dialog("open");
+		}
+	}
+});
+		
+$("#diningfood1").dialog({
+    autoOpen: false,
+	modal: true,
+	resizable: false,
+	buttons: {
+		"Return": function() {
+			$(this).dialog("close");
+			$("#diningfoodmain").dialog("open");
+		}
+	}
+});
+
+
+$("#ballcost").dialog({
+    autoOpen: false,
+	modal: true,
+	resizable: false,
+	buttons: {
+		"View the actual receipt for food and drink": function() {
 			$("#partyreceipt").dialog("open");
 		},
-		"Close": function() {
+		"Return": function() {
 			$(this).dialog("close");
-			$("#drawingfood").dialog("open");
+			$("#diningfoodmain").dialog("open");
 		}
 	}
 });	
@@ -142,204 +342,9 @@ $("#partyreceipt").dialog({
 	modal: true,
 	resizable: false,
 	buttons: {
-		"The bill includes oysters, champagne, ice desserts items": function() {
+		"Return": function() {
 			$(this).dialog("close");
-		}
-	}
-});
-
-//Bridget Larkins, hallway maid questions/answers
- $("#bridget-dialog1").dialog({
-    autoOpen: false,
-	modal: true,
-	resizable: false,
-	buttons: {
-		"Hi Bridget. Are things going well with the party so far?": function() {
-		    $(this).dialog("close");
-			$("#bridget-dialog2").dialog("open");
-		},
-		"Tell me about yourself. Where are you from? What are your duties around here?": function() {
-			$(this).dialog("close");
-			$("#bridget-dialog3").dialog("open");
-		},
-		"What a grand house. How long have you been employed here?": function() {
-			$(this).dialog("close");
-			$("#bridget-dialog4").dialog("open");
-		},
-		"You must have done a great deal to get this party set up. It looks absolutely wonderful. Do you work all day?": function() {
-			$(this).dialog("close");
-			$("#bridget-dialog5").dialog("open");
-		},
-		"I don't need anything right now. Thanks.": function() {
-			$(this).dialog("close");
-			$("#bridget-dialog6").dialog("open");
-		}
-	}
-});
-	
-$("#bridget-dialog2").dialog({
-    autoOpen: false,
-	modal: true,
-	resizable: false,
-	buttons: {
-		"The house is beautiful. I'm enjoying the view.": function() {
-			$(this).dialog("close");
-			$("#bridget-dialog1").dialog("open");
-		},
-		"To tell you the truth, balls really aren't for me.": function() {
-			$(this).dialog("close");
-			$("#bridget-dialog7").dialog("open");
-		}
-	}
-});
-	
-$("#bridget-dialog3").dialog({
-    autoOpen: false,
-	modal: true,
-	resizable: false,
-	buttons: {
-		"Well that's interesting. Why don't you tell me a bit about Mrs. Hart. What is life for her like, here?": function() {
-			$(this).dialog("close");
-			$("#bridget-dialog8").dialog("open");
-		}
-	}
-});
-
-$("#bridget-dialog4").dialog({
-    autoOpen: false,
-	modal: true,
-	resizable: false,
-	buttons: {
-		"That's quite commendable. I think I might go see if I can have a word with Mrs. Hart herself.": function() {
-			$(this).dialog("close");
-		}
-	}
-});
-
-$("#bridget-dialog5").dialog({
-    autoOpen: false,
-	modal: true,
-	resizable: false,
-	buttons: {
-		"The Harts sound lovely. Perhaps I'll go see if Mrs. Hart is around.": function() {
-			$(this).dialog("close");
-			$("#bridget-dialog6").dialog("open");
-		},
-		"Tell me about Mrs. Hart. What is life for her like, here?": function() {
-			$(this).dialog("close");
-			$("#bridget-dialog8").dialog("open");
-		}
-	}
-});
-
-$("#bridget-dialog6").dialog({
-    autoOpen: false,
-	modal: true,
-	resizable: false,
-	buttons: {
-		"Pleasure meeting you.": function() {
-			$(this).dialog("close");
-		}
-	}
-});
-
-$("#bridget-dialog7").dialog({
-    autoOpen: false,
-	modal: true,
-	resizable: false,
-	buttons: {
-		"That's fascinating. I think I'll go have a look. Pleasure meeting you.": function() {
-			$(this).dialog("close");
-		}
-	}
-});
-
-$("#bridget-dialog8").dialog({
-    autoOpen: false,
-	modal: true,
-	resizable: false,
-	buttons: {
-		"Education for young women? Do tell me more. What has Mrs. Hart accomplished there?": function() {
-			$(this).dialog("close");
-			$("#bridget-dialog9").dialog("open");
-		},
-		"Was Mrs. Hart not always like this?": function() {
-			$(this).dialog("close");
-			$("#bridget-dialog10").dialog("open");
-		}
-	}
-});
-
-$("#bridget-dialog9").dialog({
-    autoOpen: false,
-	modal: true,
-	resizable: false,
-	buttons: {
-		"That's quite commendable. I think I might go see if I can have a word with Mrs. Hart herself.": function() {
-			$(this).dialog("close");
-		}
-	}
-});
-
-$("#bridget-dialog10").dialog({
-    autoOpen: false,
-	modal: true,
-	resizable: false,
-	buttons: {
-		"That's fascinating. I think I'll go have a look. Pleasure meeting you, Bridget.": function() {
-			$(this).dialog("close");
-		}
-	}
-});
-
-//Catherine Nichols, dining room maid questions/answers
-$("#catherine-dialog1").dialog({
-    autoOpen: false,
-	modal: true,
-	resizable: false,
-	buttons: {
-		"That sounds great.": function() {
-		    $(this).dialog("close");
-			$("#catherine-dialog2").dialog("open");
-		}
-	}
-});
-		
-$("#catherine-dialog2").dialog({
-    autoOpen: false,
-	modal: true,
-	resizable: false,
-	buttons: {
-		"Alright.": function() {
-			$(this).dialog("close");
-			$("#catherine-dialog3").dialog("open");
-		}
-	}
-});
-	
-$("#catherine-dialog3").dialog({
-    autoOpen: false,
-	modal: true,
-	resizable: false,
-	buttons: {
-		"This all looks wonderful. It most have taken you all day to prepare.": function() {
-			$(this).dialog("close");
-			$("#catherine-dialog4").dialog("open");
-		},
-		"That is all for now. I think I will join the other guests.": function() {
-			$(this).dialog("close");
-		}
-	}
-});
-
-$("#catherine-dialog4").dialog({
-    autoOpen: false,
-	modal: true,
-	resizable: false,
-	buttons: {
-		"I am quite impressed.": function() {
-			$(this).dialog("close");
-			$("#catherine-dialog3").dialog("open");
+			$("#ballcost").dialog("open");
 		}
 	}
 });
