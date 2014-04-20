@@ -1,6 +1,8 @@
 //Virginia Reel song plays for 20 seconds
 var hasDialogue = '';
-function playVirginiaReel(hasDialogue) {
+function playVirginiaReel(hasDialogue, played) {
+if(played === false)
+{
 	var sound = new AR.Sound("assets/virginia_reel_20secs.mp3", {
 	  onLoaded : function(){sound.play();},
 	  onError : function(){
@@ -14,6 +16,7 @@ function playVirginiaReel(hasDialogue) {
     		$("#virginiareel").dialog("open");
     	}
 	};
+}
 }
 
 // =====================================================================
@@ -116,6 +119,93 @@ $("#virginiareel2").dialog({
 		}
 	}
 });
+
+// ======================================================================
+//Maria Tillman questions/answers
+
+$("#maria").dialog({
+    autoOpen: false,
+	modal: true,
+	resizable: false,
+	buttons: {
+		"Can't you ask Mr. Hart for a dance yourself?": function() {
+		    $(this).dialog("close");
+		    $("#maria1").dialog("open");
+		},
+		"What's so special about a couple's dance?": function() {
+		    $(this).dialog("close");
+		    $("#maria2").dialog("open");
+		}
+	}
+});
+
+$("#maria1").dialog({
+    autoOpen: false,
+	modal: true,
+	resizable: false,
+	buttons: {
+		"Return": function() {
+			$(this).dialog("close");
+			$("#maria").dialog("open");
+		}
+	}
+});
+	
+$("#maria2").dialog({
+    autoOpen: false,
+	modal: true,
+	resizable: false,
+	buttons: {
+		"Return": function() {
+			$(this).dialog("close");
+			$("#maria").dialog("open");
+		}
+	}
+});
+
+// ======================================================================
+//Billy Burden questions/answers
+
+$("#billy").dialog({
+    autoOpen: false,
+	modal: true,
+	resizable: false,
+	buttons: {
+		"Why is champagne the only drink served?": function() {
+		    $(this).dialog("close");
+		    $("#billy1").dialog("open");
+		},
+		"You seem to like champagne a lot. Why is it so popular?": function() {
+		    $(this).dialog("close");
+		    $("#billy2").dialog("open");
+		}
+	}
+});
+
+$("#billy1").dialog({
+    autoOpen: false,
+	modal: true,
+	resizable: false,
+	buttons: {
+		"Return": function() {
+			$(this).dialog("close");
+			$("#billy").dialog("open");
+		}
+	}
+});
+	
+$("#billy2").dialog({
+    autoOpen: false,
+	modal: true,
+	resizable: false,
+	buttons: {
+		"Return": function() {
+			$(this).dialog("close");
+			$("#billy").dialog("open");
+		}
+	}
+});
+
 
 // ======================================================================
 //Drawing room food desserts questions/answers

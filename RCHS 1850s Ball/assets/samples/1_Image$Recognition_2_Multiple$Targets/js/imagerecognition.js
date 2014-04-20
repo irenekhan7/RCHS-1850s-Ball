@@ -72,13 +72,25 @@ $(document).ready(function() {
 				scale: 0.4,
 				zOrder: -1
 			});
+			//Maria Tillman dialog window
+			overlayParlorLady.onClick = function() {
+	        	$("#maria").dialog("open");	
+			};
+			//Billy dialog window
+			overlayParlorBilly.onClick = function() {
+	        	$("#billy").dialog("open");	
+			};
 			//render the front parlor with overlays
 			//Virginia Reel song plays for 20 seconds when user finds marker image
+			var played = false;
 			var pageParlorDance = new AR.Trackable2DObject(this.tracker, "3_parlor_front", {
 				drawables: {
 					cam: [overlayParlorBilly, overlayParlorLady]
 				},
-				onEnterFieldOfVision: function() { playVirginiaReel('hasDialogue'); }
+				onEnterFieldOfVision: function() {
+				playVirginiaReel('hasDialogue', played);
+				played = true; 
+				}
 			});
 			
 			// Dining room - Create overlay Richard Hart Jr. and food items
