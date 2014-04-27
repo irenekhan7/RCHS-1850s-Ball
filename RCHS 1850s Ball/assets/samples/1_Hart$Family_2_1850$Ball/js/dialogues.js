@@ -39,9 +39,6 @@ $(document.body).on("click", ".ui-widget-overlay", function() {
 	modal: true,
 	resizable: false,
 	buttons: {
-		"Start Tour": function() {
-			$(this).dialog("close");
-		},
 		"Tell Me More...": function() {
 		    $(this).dialog("close");
 			$("#appintro1").dialog("open");
@@ -49,6 +46,9 @@ $(document.body).on("click", ".ui-widget-overlay", function() {
 		"What is this application?": function() {
 			$(this).dialog("close");
 			$("#appintro2").dialog("open");
+		},
+		"Start Tour": function() {
+			$(this).dialog("close");
 		}
 	}
 });
@@ -78,177 +78,6 @@ $("#appintro2").dialog({
 });
 
 // ======================================================================
-//Virginia Reel questions/answers
-$("#virginiareel").dialog({
-    autoOpen: false,
-	modal: true,
-	resizable: false,
-	buttons: {
-		"What is the Virginia Reel?": function() {
-		    $(this).dialog("close");
-		    $("#virginiareel1").dialog("open");
-		},
-		"How late will we dance tonight?": function() {
-		    $(this).dialog("close");
-		    $("#virginiareel2").dialog("open");
-		},
-		"Close": function() {
-			$(this).dialog("close");
-		}
-	}
-});
-$("#virginiareel1").dialog({
-    autoOpen: false,
-	modal: true,
-	resizable: false,
-	buttons: {
-		"Return": function() {
-			$(this).dialog("close");
-			$("#virginiareel").dialog("open");
-		}
-	}
-});
-$("#virginiareel2").dialog({
-    autoOpen: false,
-	modal: true,
-	resizable: false,
-	buttons: {
-		"Return": function() {
-			$(this).dialog("close");
-			$("#virginiareel").dialog("open");
-		}
-	}
-});
-
-// ======================================================================
-//Maria Tillman questions/answers
-
-$("#maria").dialog({
-    autoOpen: false,
-	modal: true,
-	resizable: false,
-	buttons: {
-		"Can't you ask Mr. Hart for a dance yourself?": function() {
-		    $(this).dialog("close");
-		    $("#maria1").dialog("open");
-		},
-		"What's so special about a couple's dance?": function() {
-		    $(this).dialog("close");
-		    $("#maria2").dialog("open");
-		}
-	}
-});
-
-$("#maria1").dialog({
-    autoOpen: false,
-	modal: true,
-	resizable: false,
-	buttons: {
-		"Return": function() {
-			$(this).dialog("close");
-			$("#maria").dialog("open");
-		}
-	}
-});
-	
-$("#maria2").dialog({
-    autoOpen: false,
-	modal: true,
-	resizable: false,
-	buttons: {
-		"Return": function() {
-			$(this).dialog("close");
-			$("#maria").dialog("open");
-		}
-	}
-});
-
-// ======================================================================
-//Billy Burden questions/answers
-
-$("#billy").dialog({
-    autoOpen: false,
-	modal: true,
-	resizable: false,
-	buttons: {
-		"Why is champagne the only drink served?": function() {
-		    $(this).dialog("close");
-		    $("#billy1").dialog("open");
-		},
-		"You seem to like champagne a lot. Why is it so popular?": function() {
-		    $(this).dialog("close");
-		    $("#billy2").dialog("open");
-		}
-	}
-});
-
-$("#billy1").dialog({
-    autoOpen: false,
-	modal: true,
-	resizable: false,
-	buttons: {
-		"Return": function() {
-			$(this).dialog("close");
-			$("#billy").dialog("open");
-		}
-	}
-});
-	
-$("#billy2").dialog({
-    autoOpen: false,
-	modal: true,
-	resizable: false,
-	buttons: {
-		"Return": function() {
-			$(this).dialog("close");
-			$("#billy").dialog("open");
-		}
-	}
-});
-
-
-// ======================================================================
-//Drawing room food desserts questions/answers
-$("#drawingroommain").dialog({
-    autoOpen: false,
-	modal: true,
-	resizable: false,
-	buttons: {
-		"What type of desserts do they serve at this Ball?": function() {
-		    $(this).dialog("close");
-			$("#dessert1").dialog("open");
-		},
-		"Who is usually in this drawing room?": function() {
-			$(this).dialog("close");
-			$("#dessert2").dialog("open");
-		}
-	}
-});
-
-$("#dessert1").dialog({
-    autoOpen: false,
-	modal: true,
-	resizable: false,
-	buttons: {
-		"Return": function() {
-			$(this).dialog("close");
-			$("#drawingroommain").dialog("open");
-		}
-	}
-});
-$("#dessert2").dialog({
-    autoOpen: false,
-	modal: true,
-	resizable: false,
-	buttons: {
-		"Return": function() {
-			$(this).dialog("close");
-			$("#drawingroommain").dialog("open");
-		}
-	}
-});
-
-// ======================================================================
 //Bridget Larkins, hallway maid questions/answers
  $("#bridgetmain").dialog({
     autoOpen: false,
@@ -259,7 +88,7 @@ $("#dessert2").dialog({
 		    $(this).dialog("close");
 			$("#bridget1").dialog("open");
 		},
-		"I detect an accent. Where are you from originally?": function() {
+		"I hear an accent. Where are you from originally?": function() {
 			$(this).dialog("close");
 			$("#bridget2").dialog("open");
 		},
@@ -267,7 +96,7 @@ $("#dessert2").dialog({
 			$(this).dialog("close");
 			$("#bridget3").dialog("open");
 		},
-		"You must have done a great deal to prepare for this party. Did you work all day?": function() {
+		"Did you work all day to prepare for this party?": function() {
 			$(this).dialog("close");
 			$("#bridget4").dialog("open");
 		}
@@ -318,6 +147,210 @@ $("#bridget4").dialog({
 		"Return": function() {
 			$(this).dialog("close");
 			$("#bridgetmain").dialog("open");
+		}
+	}
+});
+
+// ======================================================================
+//Sitting room desserts and champagne questions/answers
+$("#sittingroommain").dialog({
+    autoOpen: false,
+	modal: true,
+	resizable: false,
+	buttons: {
+		"What desserts are popular right now?": function() {
+		    $(this).dialog("close");
+			$("#dessert1").dialog("open");
+		},
+		"What happened to sitting rooms?": function() {
+			$(this).dialog("close");
+			$("#architecture").dialog("open");
+		},
+		"How is champagne made these days?": function() {
+		    $(this).dialog("close");
+		    $("#champagne1").dialog("open");
+		},
+		"Why is champagne so popular?": function() {
+		    $(this).dialog("close");
+		    $("#champagne2").dialog("open");
+		}
+	}
+});
+
+$("#dessert1").dialog({
+    autoOpen: false,
+	modal: true,
+	resizable: false,
+	buttons: {
+		"Return": function() {
+			$(this).dialog("close");
+			$("#sittingroommain").dialog("open");
+		}
+	}
+});
+$("#architecture").dialog({
+    autoOpen: false,
+	modal: true,
+	resizable: false,
+	buttons: {
+		"Return": function() {
+			$(this).dialog("close");
+			$("#sittingroommain").dialog("open");
+		}
+	}
+});
+$("#champagne1").dialog({
+    autoOpen: false,
+	modal: true,
+	resizable: false,
+	buttons: {
+		"Return": function() {
+			$(this).dialog("close");
+			$("#sittingroommain").dialog("open");
+		}
+	}
+});
+$("#champagne2").dialog({
+    autoOpen: false,
+	modal: true,
+	resizable: false,
+	buttons: {
+		"Return": function() {
+			$(this).dialog("close");
+			$("#sittingroommain").dialog("open");
+		}
+	}
+});
+
+// ======================================================================
+// Parlor - Maria Tillman questions/answers
+
+$("#maria").dialog({
+    autoOpen: false,
+	modal: true,
+	resizable: false,
+	buttons: {
+		"Can't you ask Mr. Hart for a dance yourself?": function() {
+		    $(this).dialog("close");
+		    $("#maria1").dialog("open");
+		},
+		"What's so special about a couple's dance?": function() {
+		    $(this).dialog("close");
+		    $("#maria2").dialog("open");
+		}
+	}
+});
+
+$("#maria1").dialog({
+    autoOpen: false,
+	modal: true,
+	resizable: false,
+	buttons: {
+		"Return": function() {
+			$(this).dialog("close");
+			$("#maria").dialog("open");
+		}
+	}
+});
+	
+$("#maria2").dialog({
+    autoOpen: false,
+	modal: true,
+	resizable: false,
+	buttons: {
+		"Return": function() {
+			$(this).dialog("close");
+			$("#maria").dialog("open");
+		}
+	}
+});
+
+// ======================================================================
+// Parlor - Billy Burden questions/answers
+
+$("#billy").dialog({
+    autoOpen: false,
+	modal: true,
+	resizable: false,
+	buttons: {
+		"(question1 for Billy)": function() {
+		    $(this).dialog("close");
+		    $("#billy1").dialog("open");
+		},
+		"(question2 for Billy)": function() {
+		    $(this).dialog("close");
+		    $("#billy2").dialog("open");
+		},
+		"Ask about the Virginia Reel": function() {
+		    $(this).dialog("close");
+		    $("#virginiareel").dialog("open");
+		}
+	}
+});
+
+$("#billy1").dialog({
+    autoOpen: false,
+	modal: true,
+	resizable: false,
+	buttons: {
+		"Return": function() {
+			$(this).dialog("close");
+			$("#billy").dialog("open");
+		}
+	}
+});
+	
+$("#billy2").dialog({
+    autoOpen: false,
+	modal: true,
+	resizable: false,
+	buttons: {
+		"Return": function() {
+			$(this).dialog("close");
+			$("#billy").dialog("open");
+		}
+	}
+});
+
+// ======================================================================
+// Parlor - Virginia Reel questions/answers
+$("#virginiareel").dialog({
+    autoOpen: false,
+	modal: true,
+	resizable: false,
+	buttons: {
+		"What is the Virginia Reel?": function() {
+		    $(this).dialog("close");
+		    $("#virginiareel1").dialog("open");
+		},
+		"How late will we dance tonight?": function() {
+		    $(this).dialog("close");
+		    $("#virginiareel2").dialog("open");
+		},
+		"Close": function() {
+			$(this).dialog("close");
+		}
+	}
+});
+$("#virginiareel1").dialog({
+    autoOpen: false,
+	modal: true,
+	resizable: false,
+	buttons: {
+		"Return": function() {
+			$(this).dialog("close");
+			$("#virginiareel").dialog("open");
+		}
+	}
+});
+$("#virginiareel2").dialog({
+    autoOpen: false,
+	modal: true,
+	resizable: false,
+	buttons: {
+		"Return": function() {
+			$(this).dialog("close");
+			$("#virginiareel").dialog("open");
 		}
 	}
 });

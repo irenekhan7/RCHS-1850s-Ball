@@ -16,7 +16,15 @@ $(document).ready(function() {
 			this.tracker = new AR.Tracker("assets/four_rooms.wtc", {
 				onLoaded: this.worldLoaded
 			});
-	
+
+			// App Intro Button image - might not work here
+/*			this.imgButton = new AR.ImageResource("assets/btnViewInvitation.jpg");	
+			var btnOpenIntro = this.createWwwButton(function() {$("#appintromain").dialog("open");};, 0.1, {
+				offsetX: -0.25,
+				offsetY: -0.25,
+				zOrder: 1
+			});
+*/	
 			// Create a overlay maid for hallway
 			var imgHallwayMaid = new AR.ImageResource("assets/hallway_maid.png");
 			var overlayHallwayMaid = new AR.ImageDrawable(imgHallwayMaid, 1, {
@@ -36,21 +44,21 @@ $(document).ready(function() {
 				}
 			});
 	
-			// Drawing room - dessert items
-			var imgDrawingDessert = new AR.ImageResource("assets/fooddrink/ice_fruit.png");
-			var overlayDrawingDessert = new AR.ImageDrawable(imgDrawingDessert, 1, {
+			// Sitting room - dessert items - change to champagne
+			var imgSittingDessert = new AR.ImageResource("assets/fooddrink/ice_fruit.png");
+			var overlaySittingDessert = new AR.ImageDrawable(imgSittingDessert, 1, {
 				offsetX: 0.07,
 				offsetY: -0.01,
 				scale: 0.4
 			});
 			//dessert dialog window
-			overlayDrawingDessert.onClick = function() {
-	        	$("#drawingroommain").dialog("open");	
+			overlaySittingDessert.onClick = function() {
+	        	$("#sittingroommain").dialog("open");	
 			};
-			//render the drawing room with dessert overlay
-			var pageDrawing = new AR.Trackable2DObject(this.tracker, "2_drawingroom", {
+			//render the sitting room with dessert overlay
+			var pageSitting = new AR.Trackable2DObject(this.tracker, "2_drawingroom", {
 				drawables: {
-					cam: overlayDrawingDessert
+					cam: overlaySittingDessert
 				}
 			});
 				
