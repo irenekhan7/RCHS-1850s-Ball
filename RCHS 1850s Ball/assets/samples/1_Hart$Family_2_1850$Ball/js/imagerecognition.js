@@ -96,7 +96,7 @@ $(document).ready(function() {
 					cam: [overlayParlorBilly, overlayParlorLady]
 				},
 				onEnterFieldOfVision: function() {
-				playVirginiaReel('hasDialogue', played);
+				playVirginiaReel('', played);
 				played = true; 
 				}
 			});

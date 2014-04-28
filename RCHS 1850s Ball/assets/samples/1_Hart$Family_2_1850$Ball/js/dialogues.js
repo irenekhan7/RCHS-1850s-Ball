@@ -43,6 +43,10 @@ $(document.body).on("click", ".ui-widget-overlay", function() {
 		    $(this).dialog("close");
 			$("#appintro1").dialog("open");
 		},
+		"Who is playing this song?": function() {
+			$(this).dialog("close");
+			$("#bandinfo").dialog("open");
+		},
 		"What is this application?": function() {
 			$(this).dialog("close");
 			$("#appintro2").dialog("open");
@@ -54,6 +58,18 @@ $(document.body).on("click", ".ui-widget-overlay", function() {
 });
 
 $("#appintro1").dialog({
+    autoOpen: false,
+	modal: true,
+	resizable: false,
+	buttons: {
+		"Return to Invitation": function() {
+			$(this).dialog("close");
+			$("#appintromain").dialog("open");
+		}
+	}
+});
+
+$("#bandinfo").dialog({
     autoOpen: false,
 	modal: true,
 	resizable: false,
@@ -162,7 +178,7 @@ $("#sittingroommain").dialog({
 		    $(this).dialog("close");
 			$("#dessert1").dialog("open");
 		},
-		"What happened to sitting rooms?": function() {
+		"What happened to Sitting Rooms?": function() {
 			$(this).dialog("close");
 			$("#architecture").dialog("open");
 		},
@@ -273,17 +289,13 @@ $("#billy").dialog({
 	modal: true,
 	resizable: false,
 	buttons: {
-		"(question1 for Billy)": function() {
+		"What is the Virginia Reel?": function() {
 		    $(this).dialog("close");
 		    $("#billy1").dialog("open");
 		},
-		"(question2 for Billy)": function() {
+		"How late will we dance tonight?": function() {
 		    $(this).dialog("close");
 		    $("#billy2").dialog("open");
-		},
-		"Ask about the Virginia Reel": function() {
-		    $(this).dialog("close");
-		    $("#virginiareel").dialog("open");
 		}
 	}
 });
@@ -312,48 +324,6 @@ $("#billy2").dialog({
 	}
 });
 
-// ======================================================================
-// Parlor - Virginia Reel questions/answers
-$("#virginiareel").dialog({
-    autoOpen: false,
-	modal: true,
-	resizable: false,
-	buttons: {
-		"What is the Virginia Reel?": function() {
-		    $(this).dialog("close");
-		    $("#virginiareel1").dialog("open");
-		},
-		"How late will we dance tonight?": function() {
-		    $(this).dialog("close");
-		    $("#virginiareel2").dialog("open");
-		},
-		"Close": function() {
-			$(this).dialog("close");
-		}
-	}
-});
-$("#virginiareel1").dialog({
-    autoOpen: false,
-	modal: true,
-	resizable: false,
-	buttons: {
-		"Return": function() {
-			$(this).dialog("close");
-			$("#virginiareel").dialog("open");
-		}
-	}
-});
-$("#virginiareel2").dialog({
-    autoOpen: false,
-	modal: true,
-	resizable: false,
-	buttons: {
-		"Return": function() {
-			$(this).dialog("close");
-			$("#virginiareel").dialog("open");
-		}
-	}
-});
 
 // ======================================================================
 //Richard Hart Jr. in the dining room
@@ -463,7 +433,7 @@ $("#ballcost").dialog({
 $("#partyreceipt").dialog({
     autoOpen: false,
 	modal: true,
-	resizable: false,
+	resizable: true,
 	buttons: {
 		"Return": function() {
 			$(this).dialog("close");
