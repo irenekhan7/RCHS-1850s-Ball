@@ -51,7 +51,7 @@ $(document.body).on("click", ".ui-widget-overlay", function() {
 			$(this).dialog("close");
 			$("#appintro2").dialog("open");
 		},
-		"Start Tour": function() {
+		"Start the Tour...": function() {
 			$(this).dialog("close");
 		}
 	}
@@ -397,6 +397,9 @@ $("#diningfoodmain").dialog({
 		"How much did a Ball like this cost in 1850?": function() {
 			$(this).dialog("close");
 			$("#ballcost").dialog("open");
+		},
+		"View the actual receipt from the caterer": function() {
+			$("#partyreceipt").dialog("open");
 		}
 	}
 });
@@ -419,9 +422,6 @@ $("#ballcost").dialog({
 	modal: true,
 	resizable: false,
 	buttons: {
-		"View the actual receipt for food and drink": function() {
-			$("#partyreceipt").dialog("open");
-		},
 		"Return": function() {
 			$(this).dialog("close");
 			$("#diningfoodmain").dialog("open");
@@ -429,7 +429,7 @@ $("#ballcost").dialog({
 	}
 });	
 
-//Receipt for actual party was $132.25 or over $4060 in 2014 dollars
+//Actual receipt from caterer, provided by RCHS
 $("#partyreceipt").dialog({
     autoOpen: false,
 	modal: true,
@@ -437,7 +437,7 @@ $("#partyreceipt").dialog({
 	buttons: {
 		"Return": function() {
 			$(this).dialog("close");
-			$("#ballcost").dialog("open");
+			$("#diningfoodmain").dialog("open");
 		}
 	}
 });
