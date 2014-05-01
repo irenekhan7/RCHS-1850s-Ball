@@ -26,7 +26,7 @@ $(document).ready(function() {
 			});
 */	
 			// Create a overlay maid for hallway
-			var imgHallwayMaid = new AR.ImageResource("assets/hallway_maid.png");
+			var imgHallwayMaid = new AR.ImageResource("assets/maid_hallway.png");
 			var overlayHallwayMaid = new AR.ImageDrawable(imgHallwayMaid, 1, {
 				offsetX: 0.05,
 				offsetY: 0.05,
@@ -63,12 +63,12 @@ $(document).ready(function() {
 			});
 				
 			// Front parlor - Create overlay Maria Tillman
-			var imgParlorLady = new AR.ImageResource("assets/parlor_mariatillman.png");
+			var imgParlorLady = new AR.ImageResource("assets/maria_tillman.png");
 			var overlayParlorLady = new AR.ImageDrawable(imgParlorLady, 1, {
 				offsetX: 0.2,
 				offsetY: 0.01,
 				opacity: 0.7,
-				scale: 0.8,
+				scale: 0.7,
 				zOrder: 1
 			});
 			// Front parlor - Create overlay drunk Billy Burden
@@ -102,11 +102,11 @@ $(document).ready(function() {
 			});
 			
 			// Dining room - Create overlay Richard Hart Jr. and food items
-			var imgRichardHart = new AR.ImageResource("assets/richardhart.png");
+			var imgRichardHart = new AR.ImageResource("assets/richardhart2.png");
 			var overlayRichardHart = new AR.ImageDrawable(imgRichardHart, 1, {
 				offsetX: 0.17,
 				offsetY: -0.1,
-				scale: 1.0,
+				scale: 0.9,
 				opacity: 0.7
 			});
 			var imgDiningFood = new AR.ImageResource("assets/fooddrink/oysters.png");
