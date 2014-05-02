@@ -37,7 +37,7 @@ $(document.body).on("click", ".ui-widget-overlay", function() {
  $("#appintromain").dialog({
     autoOpen: false,
 	modal: true,
-	resizable: false,
+	resizable: true,
 	buttons: {
 		"Tell Me More...": function() {
 		    $(this).dialog("close");
