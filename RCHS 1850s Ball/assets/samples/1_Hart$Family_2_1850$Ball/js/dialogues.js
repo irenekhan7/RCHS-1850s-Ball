@@ -43,7 +43,7 @@ $(document.body).on("click", ".ui-widget-overlay", function() {
 		    $(this).dialog("close");
 			$("#appintro1").dialog("open");
 		},
-		"Who is playing this song?": function() {
+		"Is there a band playing?": function() {
 			$(this).dialog("close");
 			$("#bandinfo").dialog("open");
 		},

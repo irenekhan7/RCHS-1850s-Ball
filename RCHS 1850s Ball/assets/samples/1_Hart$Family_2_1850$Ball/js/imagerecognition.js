@@ -44,8 +44,8 @@ $(document).ready(function() {
 				}
 			});
 	
-			// Sitting room - dessert items - change to champagne
-			var imgSittingDessert = new AR.ImageResource("assets/fooddrink/ice_fruit.png");
+			// Sitting room - dessert and champagne item
+			var imgSittingDessert = new AR.ImageResource("assets/fooddrink/champagne_dessert.png");
 			var overlaySittingDessert = new AR.ImageDrawable(imgSittingDessert, 1, {
 				offsetX: 0.07,
 				offsetY: -0.01,
@@ -63,7 +63,7 @@ $(document).ready(function() {
 			});
 				
 			// Front parlor - Create overlay Maria Tillman
-			var imgParlorLady = new AR.ImageResource("assets/maria_tillman.png");
+			var imgParlorLady = new AR.ImageResource("assets/parlor_mariatillman.png");
 			var overlayParlorLady = new AR.ImageDrawable(imgParlorLady, 1, {
 				offsetX: 0.2,
 				offsetY: 0.01,
@@ -102,7 +102,7 @@ $(document).ready(function() {
 			});
 			
 			// Dining room - Create overlay Richard Hart Jr. and food items
-			var imgRichardHart = new AR.ImageResource("assets/richardhart2.png");
+			var imgRichardHart = new AR.ImageResource("assets/richardhart.png");
 			var overlayRichardHart = new AR.ImageDrawable(imgRichardHart, 1, {
 				offsetX: 0.17,
 				offsetY: -0.1,
